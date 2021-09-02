@@ -1,0 +1,30 @@
+.heading {
+  color: #d4c2b9;
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: white;
+  font-family: Merienda;
+}
+.sendButton {
+  display: flex;
+  justify-content: flex-end;
+  display: block;
+  margin: 10px 3px !important;
+  background: #e2916e;
+  font: bold 20px Patrick Hand;
+  color: white;
+  padding: 6px 50px !important;
+  text-shadow: none;
+  height: 38px !important;
+}
+
+.sendButton i {
+  font-size: 25px;
+  padding: 5px;
+}
+
+.name-form-box {
+  padding: 50px 30px;
+}

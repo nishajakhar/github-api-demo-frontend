@@ -43,7 +43,7 @@ class SearchRepoForm extends Component {
         <Route
           render={({ history }) => (
             <Form
-              title="Enter github Username"
+              title="Enter Repository name"
               buttonName="Get Repository"
               onUsernameSubmitHandler={async username => {
                 const result = await this.onRepoSubmitHandler(username);

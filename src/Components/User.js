@@ -3,8 +3,6 @@ import Header from './Header';
 
 class User extends Component {
   constructor(props) {
-    console.log('I am hereeee', props);
-
     super(props);
     this.state = {
       user: null,

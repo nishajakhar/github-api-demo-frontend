@@ -5,8 +5,6 @@ import Form from './Form';
 
 class SearchRepoForm extends Component {
   constructor(props) {
-    console.log('I am hereeee', props);
-
     super(props);
     this.state = {
       username: '',
@@ -19,7 +17,6 @@ class SearchRepoForm extends Component {
     fetch(`http://localhost:4000/repo/${username}`)
       .then(res => res.json())
       .then(result => {
-        console.log('I am here in response', result.status);
         if (result.status && result.status == 200) {
           this.setState({ repos: result.data, isLoaded: true, username: username });
           this.props.history.push({
@@ -34,7 +31,6 @@ class SearchRepoForm extends Component {
         }
       })
       .catch(err => {
-        console.log('I am here in errro', err);
         this.setState({ username: username, isError: true, errorMessage: err.message });
       });
   }

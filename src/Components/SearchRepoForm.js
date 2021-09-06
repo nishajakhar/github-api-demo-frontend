@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Header from './Header';
 import { Route } from 'react-router-dom';
 import Form from './Form';
-
+import { backend } from '../config';
 class SearchRepoForm extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +14,7 @@ class SearchRepoForm extends Component {
   }
 
   async onRepoSubmitHandler(username) {
-    fetch(`http://localhost:4000/repo/${username}`)
+    fetch(`${backend.url}repo/${username}`)
       .then(res => res.json())
       .then(result => {
         if (result.status && result.status == 200) {
